@@ -3,7 +3,7 @@ import axios from "axios";
 const Index = () => {
   const [comments, setComments] = useState([]);
   const [page, setPage] = useState(1)
-  const [limit, setLimit] = useState(23)
+  const [limit, setLimit] = useState(8)
   useEffect(() => {
     axios
       .get(`https://jsonplaceholder.typicode.com/comments?_page=${page}&_limit=${limit}`)
