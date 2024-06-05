@@ -3,7 +3,7 @@ import axios from "axios";
 const Index = () => {
   const [comments, setComments] = useState([]);
   const [page, setPage] = useState(1)
-  const [limit, setLimit] = useState(4)
+  const [limit, setLimit] = useState(23)
   useEffect(() => {
     axios
       .get(`https://jsonplaceholder.typicode.com/comments?_page=${page}&_limit=${limit}`)
@@ -25,7 +25,6 @@ const Index = () => {
 
   return (
     <div className="comments">
-      <h1 className="text-center my-3">Comments</h1>
       <div className="row">
         <div className="col-md-4">
           <select onChange={(e)=>setLimit(e.target.value)} className="form-control my-2">

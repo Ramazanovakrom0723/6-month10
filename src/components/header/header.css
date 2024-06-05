@@ -3,4 +3,5 @@
     height: 10vh;
     background-color: aqua;
     border-radius: 10px;
+    position: fixed;
 }
